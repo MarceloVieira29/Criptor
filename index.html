@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Cripto AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Painel Cripto AI</h1>
+
+    <div class="theme-toggle">
+      <label>
+        <input type="checkbox" id="themeSwitch">
+        Alternar Tema Escuro/Claro
+      </label>
+    </div>
+
+    <div class="controls">
+      <label for="coinSelect">Selecione a moeda:</label>
+      <select id="coinSelect">
+        <option value="bitcoin">Bitcoin (BTC)</option>
+        <option value="ethereum">Ethereum (ETH)</option>
+        <option value="binancecoin">Binance Coin (BNB)</option>
+        <!-- Adicione mais opções conforme desejado -->
+      </select>
+
+      <label for="periodSelect">Período:</label>
+      <select id="periodSelect">
+        <option value="7">7 dias</option>
+        <option value="30" selected>30 dias</option>
+        <option value="90">90 dias</option>
+      </select>
+
+      <button id="loadBtn">Carregar</button>
+    </div>
+
+    <div class="signal">
+      <h2 id="signalText">–</h2>
+      <p id="infoText"></p>
+    </div>
+
+    <canvas id="priceChart" width="800" height="400"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
